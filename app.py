@@ -1,5 +1,5 @@
 from flask import Blueprint, render_template, request
-from algorithm.fibonacci import Fibonacci
+from fibonacci import Fibonacci
 
 algorithm_bp = Blueprint('algorithm', __name__,
                          template_folder='templates',
