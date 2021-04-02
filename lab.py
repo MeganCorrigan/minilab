@@ -2,8 +2,8 @@ class geo:
 
     def __init__(self, series):
         """Built in validation and exception"""
-        self.list = None
-        self.number = None
+        self.list = []
+        self.number = 1
         if series < 2 or series > 100:
             raise ValueError("Series must be between 2 and 100")
         self._series = series
