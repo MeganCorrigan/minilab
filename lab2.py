@@ -1,10 +1,8 @@
-"""Fibonacci algorithm contained within a class """
-
 
 class Fibonacci:
-    """Initializer of class takes series parameter and returns Class Objectg"""
+
     def __init__(self, series):
-        """Built in validation and exception"""
+
         if series < 2 or series > 100:
             raise ValueError("Series must be between 2 and 100")
         self._series = series
@@ -17,22 +15,21 @@ class Fibonacci:
         # Instant end = Instant.now();    // time capture -- end
         # this.timeElapsed = Duration.between(start, end);
 
-    """Algorithm for building Fibonacci sequence, this id called from __init__"""
+
     def calc_series(self):
         limit = self._series
-        f = 1  # fibonacci starting array/list
-        current_num = 1
+        f = 1  # starting factorial number
         x = 1
-        while limit >= x:
-            self.set_data(f)
-            f = self.recursive_factorial(x)
-            x += 1
+        while limit >= x:  # counts up to the limit
+            self.set_data(f) # adds current number to the list to print at end
+            f = self.recursive_factorial(x) # calculates factorial through recursion
+            x += 1 # updates to be the next count
 
-    def recursive_factorial(self, num):
+    def recursive_factorial(self, num): # calculates the factorial of num by getting num-1 and multiple that by num
         if num > 1:
             return num * self.recursive_factorial(num - 1)
         else:
-            return num
+            return num # base case (if condition fails then break out of recursive loop)
 
     """Method/Function to set Fibonacci data: list, dict, and dictID are instance variables of Class"""
     def set_data(self, num):
